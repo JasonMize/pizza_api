@@ -7,6 +7,7 @@ class Pizza(models.Model):
 
     def total_price (self):
         total = self.price
+        
         toppings = self.topping_set.all()        
         for topping in toppings:
             total += topping.price

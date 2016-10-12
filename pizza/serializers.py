@@ -32,7 +32,7 @@ class PizzaSerializer(serializers.ModelSerializer):
             'total_price',
             'total_pizza_price',
         )
-        read_only_fields = ('total_price',)
+        read_only_fields = ('total_price','total_pizza_price',)
 
     def get_total_pizza_price(self, obj):
         total = obj.price
